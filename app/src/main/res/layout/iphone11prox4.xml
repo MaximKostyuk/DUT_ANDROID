@@ -247,7 +247,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/wight_background_named"
-            android:text="Chiken Beef Stroganoff"
+            android:text="Laghman with chicken"
             android:textAlignment="center"
             android:textSize="22dp"
             app:layout_constraintBottom_toBottomOf="parent"
