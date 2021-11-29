@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/LogoLayout"
+        android:layout_width="340dp"
+        android:layout_height="400dp"
+        android:background="@drawable/logo_back"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/LogoName"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:fontFamily="monospace"
+            android:text="@string/my_recipes"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="60sp" />
+
+        <ImageView
+            android:id="@+id/Logo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="70dp"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/logo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="@drawable/fileds"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editEmailAddress"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="   Email"
+                android:inputType="textEmailAddress"
+                android:minHeight="50dp" />
+
+            <ImageView
+                android:id="@+id/emailImage"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/email" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fileds"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextTextPassword2"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:ems="100000"
+                android:hint="  Password"
+                android:inputType="textPassword"
+                android:minHeight="50dp"/>
+
+            <ImageView
+                android:id="@+id/LockImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/lock" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:background="@drawable/button_back"
+            android:layout_height="58dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginHorizontal="50dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="192dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/button_back"
+                android:fontFamily="monospace"
+                android:text="Log in" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="100dp"
+            android:layout_marginHorizontal="100dp"
+            android:layout_height="wrap_content"
+            android:background=""
+            android:textColor="@color/gray"
+            android:text="Sing in" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
