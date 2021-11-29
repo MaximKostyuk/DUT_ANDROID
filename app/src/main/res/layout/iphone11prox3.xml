@@ -6,182 +6,208 @@
     android:layout_height="match_parent"
     android:background="@drawable/logo_back">
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
+    <!--begin of buttons-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
 
         <Button
             android:id="@+id/button_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="113dp"
+            android:layout_height="81dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/button_goback" />
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            app:backgroundTint="#8BC24C"
+            app:cornerRadius="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#000000"
+            app:strokeWidth="1dp" />
 
         <Button
             android:id="@+id/button_edit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="140dp"
-            android:background="@drawable/button_goback"
-            android:text="Button" />
-    </LinearLayout>
+            android:layout_width="113dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="184dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="1dp"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            app:backgroundTint="#8BC24C"
+            app:cornerRadius="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#000000"
+            app:strokeWidth="1dp" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout_title_steps"
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--End of buttons-->
+
+    <!--begin of title-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_title_name"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/title_name"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:background="@drawable/logo_back_profile"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/dish_name"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:layout_marginStart="154dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="165dp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/wight_background_named"
                 android:text="Chiken Beef Stroganoff"
                 android:textAlignment="center"
-                android:textSize="22dp" />
+                android:textSize="22dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ScrollView
-            android:id="@+id/ingridients"
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--Scroll View contains ingridients begin -->
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="409dp"
+        android:layout_height="589dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout_title_name">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="35dp"
-            android:layout_marginRight="35dp">
-
-            <LinearLayout
-                android:id="@+id/ingridients_LL"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/logo_back_white"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/ingridient1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Chiken fillet - 600 gr" />
-
-                <TextView
-                    android:id="@+id/ingridient2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sour cream - 2 tablespoons" />
-
-                <TextView
-                    android:id="@+id/ingridient3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Tomato paste - 1 tbsp" />
-
-                <TextView
-                    android:id="@+id/ingridient4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-
-                <TextView
-                    android:id="@+id/ingridient5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-
-                <TextView
-                    android:id="@+id/ingridient6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-
-                <TextView
-                    android:id="@+id/ingridient7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </LinearLayout>
-        </ScrollView>
-
-
-        <LinearLayout
-            android:id="@+id/ingridients_step"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/steps"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/logo_back_profile"
-                android:orientation="horizontal">
+            <TextView
+                android:id="@+id/ingridient1"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_marginEnd="135dp"
+                android:text="Chiken fillet - 600 gr"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/steps_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/wight_background_named"
-                    android:text="@string/steps"
-                    android:textAlignment="center"
-                    android:textSize="22dp" />
-            </LinearLayout>
-
-            <ScrollView
-                android:id="@+id/steps_sv"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
-                android:layout_marginRight="35dp">
+                android:layout_marginEnd="187dp"
+                android:text="Sour cream"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingridient1" />
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/logo_back_white"
-                    android:orientation="vertical">
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <!--Scroll View contains ingridients end -->
 
-                    <TextView
-                        android:id="@+id/step1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="1.Wash and dry the chicken fillet and cut it into 1 cm thick pieces" />
 
-                    <TextView
-                        android:id="@+id/step2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="2 etc" />
+    <!--End of title-->
 
-                    <TextView
-                        android:id="@+id/step3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="3 etc" />
-                </LinearLayout>
-            </ScrollView>
-        </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ingridients_step"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="216dp">
 
-    </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width=""
+            android:layout_height=""
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+    android:id="@+id/ingridients_LL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/logo_back_white"
+    android:orientation="vertical">
+
+<TextView
+android:id="@+id/ingridient1"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Chiken fillet - 600 gr" />
+
+<TextView
+android:id="@+id/ingridient2"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Sour cream - 2 tablespoons" />
+
+<TextView
+android:id="@+id/ingridient3"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Tomato paste - 1 tbsp" />
+
+<TextView
+android:id="@+id/ingridient4"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="TextView" />
+
+<TextView
+android:id="@+id/ingridient5"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="TextView" />
+
+<TextView
+android:id="@+id/ingridient6"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="TextView" />
+
+<TextView
+android:id="@+id/ingridient7"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="TextView" />
